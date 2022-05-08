@@ -6,7 +6,7 @@ import Effect (Effect)
 import Effect.Aff (launchAff_)
 import Test.Chapter2 (circleAreaComposedSpec, circleAreaSpec, diagonalSpec)
 import Test.Chapter3 (containsNameSpec, findEntryBySpec, findEntrySpec, insertEntrySpec, removeDuplicatesSpec, showEntrySpec)
-import Test.Chapter4Spec (countEvenSpec, isEvenSpec)
+import Test.Chapter4Spec (cartesianProductSpec, countEvenSpec, factorsSpec, isEvenSpec, isPrimeSpec, pythagoreanTripleSpec, removeNegativesSpec, removeNegativesWithInfixSpec, squaresSpec)
 import Test.Spec.Reporter (consoleReporter)
 import Test.Spec.Runner (runSpec)
 
@@ -28,3 +28,10 @@ main = do
     -- Chapter 4
     isEvenSpec
     countEvenSpec
+    squaresSpec
+    removeNegativesSpec
+    removeNegativesWithInfixSpec
+    factorsSpec
+    isPrimeSpec
+    cartesianProductSpec
+    pythagoreanTripleSpec
