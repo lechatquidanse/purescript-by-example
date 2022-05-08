@@ -1,4 +1,4 @@
-module Test.Chapter2
+module Test.Chapter2Spec
   ( circleAreaComposedSpec
   , circleAreaSpec
   , diagonalSpec

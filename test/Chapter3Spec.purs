@@ -1,4 +1,4 @@
-module Test.Chapter3
+module Test.Chapter3Spec
   ( containsNameSpec
   , findEntryBySpec
   , findEntrySpec
