@@ -1,5 +1,6 @@
 module Test.Chapter4Spec
-  ( cartesianProductSpec
+  ( areTrueSpec
+  , cartesianProductSpec
   , countEvenSpec
   , factorsSpec
   , isEvenSpec
@@ -13,7 +14,7 @@ module Test.Chapter4Spec
 
 import Prelude
 
-import Chapter4.Chapter4 (cartesianProduct, countEven, factors, isEven, isPrime, pythagoreanTriple, removeNegatives, removeNegativesWithInfix, squares)
+import Chapter4.Chapter4 (areTrue, cartesianProduct, countEven, factors, isEven, isPrime, pythagoreanTriple, removeNegatives, removeNegativesWithInfix, squares)
 import Data.Tuple (Tuple(..))
 import Test.Spec (Spec, describe, it)
 import Test.Spec.Assertions (shouldEqual)
@@ -70,3 +71,10 @@ pythagoreanTripleSpec =
   describe "pythagoreanTriple" do
     it "pythagoreanTriple 5 is [[3,4,5],[4,3,5]]" do
       pythagoreanTriple 5 `shouldEqual` [[3,4,5],[4,3,5]]
+areTrueSpec ∷ Spec Unit
+areTrueSpec =
+  describe "areTrue" do
+    it "returns false with [true, false]" do
+      areTrue [true, false] `shouldEqual` false
+    it "returns true with [true, true]" do
+      areTrue [true, true] `shouldEqual` true

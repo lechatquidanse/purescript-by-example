@@ -1,5 +1,6 @@
 module Chapter4.Chapter4
-  ( booleanToNumber
+  ( areTrue
+  , booleanToNumber
   , cartesianProduct
   , countEven
   , factors
@@ -15,7 +16,7 @@ module Chapter4.Chapter4
 import Prelude
 
 import Control.Alternative (guard)
-import Data.Array (filter, length, (..))
+import Data.Array (filter, foldl, length, (..))
 import Data.Array.Partial (tail, head)
 import Data.Tuple (Tuple(..))
 import Partial.Unsafe (unsafePartial)
@@ -85,3 +86,7 @@ pythagoreanTriple n = do
   pure [a,b,c]
 
 -- Exercice 9 factorizations :: Int -> [[Int]]
+
+-- Exercice 10
+areTrue :: Array Boolean -> Boolean
+areTrue arr = foldl (&&) true arr
